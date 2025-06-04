@@ -1,0 +1,19 @@
+[project]
+name = "streamlit-copy-to-clipboard"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "streamlit>=1.45.1",
+]
+
+[dependency-groups]
+dev = [
+    "setuptools>=80.9.0",
+    "streamlit-copy-to-clipboard",
+    "types-setuptools>=80.9.0.20250529",
+]
+
+[tool.uv.sources]
+streamlit-copy-to-clipboard = { workspace = true }
