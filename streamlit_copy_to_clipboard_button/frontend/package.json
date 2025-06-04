@@ -1,5 +1,5 @@
 {
-  "name": "streamlit_copy_to_clipboard",
+  "name": "streamlit-copy-to-clipboard-button",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

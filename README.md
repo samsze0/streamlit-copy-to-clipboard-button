@@ -1,4 +1,4 @@
-# streamlit-copy-to-clipboard
+# streamlit-copy-to-clipboard-button
 
 A Streamlit copy-to-clipboard button component that respects the streamlit page styles.
 
@@ -7,7 +7,7 @@ A Streamlit copy-to-clipboard button component that respects the streamlit page 
 ## Installation instructions
 
 ```sh
-pip install streamlit-copy-to-clipboard
+pip install streamlit-copy-to-clipboard-button
 ```
 
 ## Usage instructions
@@ -15,7 +15,7 @@ pip install streamlit-copy-to-clipboard
 ```python
 import streamlit as st
 
-from streamlit_copy_to_clipboard import copy_to_clipboard
+from streamlit_copy_to_clipboard_button import copy_to_clipboard
 
 copy_to_clipboard(
     "Text to copy",

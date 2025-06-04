@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_copy_to_clipboard import copy_to_clipboard
+from streamlit_copy_to_clipboard_button import copy_to_clipboard
 
 copy_to_clipboard(
     "Hello, world!", label="Copy to clipboard", label_after_copy="Copied!"
