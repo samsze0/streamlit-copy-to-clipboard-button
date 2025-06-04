@@ -1,6 +1,6 @@
 # streamlit-copy-to-clipboard
 
-Streamlit component that allows you to copy text to clipboard.
+A Streamlit copy-to-clipboard button component that respects the streamlit page styles.
 
 ![](assets/demo-1.png)
 
