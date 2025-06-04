@@ -1,6 +1,6 @@
 [project]
 name = "streamlit-copy-to-clipboard-button"
-version = "1.0.0"
+version = "1.0.7"
 authors = [{ name = "Sam Sze", email = "mingsum.sam@gmail.com" }]
 description = "A Streamlit copy-to-clipboard button component that respects the streamlit page styles."
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -15,6 +15,11 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["streamlit_copy_to_clipboard_button"]
+
+# Include the frontend build directory in the package
+# Include py.typed in the package
+[tool.setuptools.package-data]
+streamlit_copy_to_clipboard_button = ["py.typed", "frontend/build/**/*"]
 
 [project.urls]
 Homepage = "https://github.com/samsze0/streamlit-copy-to-clipboard-button"

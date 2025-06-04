@@ -486,7 +486,7 @@ wheels = [
 
 [[package]]
 name = "streamlit-copy-to-clipboard-button"
-version = "1.0.0"
+version = "1.0.6"
 source = { editable = "." }
 dependencies = [
     { name = "streamlit" },
