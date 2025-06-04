@@ -2,7 +2,7 @@
 
 A Streamlit copy-to-clipboard button component that respects the streamlit page styles.
 
-![](assets/demo-1.png)
+![Demo](https://raw.githubusercontent.com/samsze0/streamlit-copy-to-clipboard-button/main/assets/demo-1.png)
 
 ## Installation instructions
 
