@@ -16,13 +16,18 @@ import React, {
 
 function CopyToClipboard({
   args,
-  disabled,
   // https://docs.streamlit.io/develop/concepts/configuration/theming
   theme,
 }: ComponentProps): ReactElement {
-  const { text, label_before_copy, label_after_copy } = args as {
+  const {
+    text,
+    label: label_before_copy,
+    label_after_copy,
+    disabled,
+  } = args as {
     text: string
-    label_before_copy: string
+    label: string
+    disabled: boolean
     label_after_copy: string
   }
 
@@ -58,7 +63,17 @@ function CopyToClipboard({
       width: "auto",
     }
 
-    if (isHovered && !disabled) {
+    if (disabled) {
+      baseStyle = {
+        ...baseStyle,
+        cursor: "not-allowed",
+        color: "rgba(250, 250, 250, 0.4)",
+        borderColor: "rgba(250, 250, 250, 0.2)",
+        backgroundColor: "transparent",
+      }
+    }
+
+    if (isHovered || isFocused) {
       baseStyle = {
         ...baseStyle,
         color: theme.primaryColor,
@@ -75,7 +90,7 @@ function CopyToClipboard({
     }
 
     return baseStyle
-  }, [theme, isHovered, isPressed, disabled])
+  }, [theme, isHovered, isFocused, isPressed, disabled])
 
   useEffect(() => {
     Streamlit.setComponentValue(numClicks)

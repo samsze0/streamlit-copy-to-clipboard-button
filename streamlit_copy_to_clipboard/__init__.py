@@ -32,7 +32,9 @@ else:
     # build directory:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/build")
-    _component_func = components.declare_component("streamlit_copy_to_clipboard", path=build_dir)
+    _component_func = components.declare_component(
+        "streamlit_copy_to_clipboard", path=build_dir
+    )
 
 
 # Create a wrapper function for the component. This is an optional
@@ -40,13 +42,19 @@ else:
 # `declare_component` and call it done. The wrapper allows us to customize
 # our component's API: we can pre-process its input args, post-process its
 # output value, and add a docstring for users.
-def copy_to_clipboard(text, key=None):
+def copy_to_clipboard(
+    text, key=None, disabled=False, label=None, label_after_copy=None
+):
     """Create a new instance of "copy_to_clipboard".
 
     Parameters
     ----------
     text: str
         The text to copy to clipboard.
+    label: str
+        The label to display on the button.
+    label_after_copy: str
+        The label to display after copying the text to clipboard.
     key: str or None
         An optional key that uniquely identifies this component. If this is
         None, and the component's arguments are changed, the component will
@@ -66,7 +74,14 @@ def copy_to_clipboard(text, key=None):
     #
     # "default" is a special argument that specifies the initial return
     # value of the component before the user has interacted with it.
-    component_value = _component_func(text=text, key=key, default=0)
+    component_value = _component_func(
+        text=text,
+        key=key,
+        default=0,
+        disabled=disabled,
+        label=label,
+        label_after_copy=label_after_copy,
+    )
 
     # We could modify the value returned from the component if we wanted.
     # There's no need to do this in our simple example - but it's an option.
