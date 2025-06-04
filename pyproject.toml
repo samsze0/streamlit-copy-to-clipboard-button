@@ -1,7 +1,7 @@
 [project]
 name = "streamlit-copy-to-clipboard"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "A Streamlit copy-to-clipboard button component that respects the streamlit page styles."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

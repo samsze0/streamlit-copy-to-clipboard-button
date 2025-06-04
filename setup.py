@@ -7,10 +7,10 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-copy-to-clipboard",
-    version="0.0.1",
+    version="1.0.0",
     author="Sam Sze",
     author_email="mingsum.sam@gmail.com",
-    description="Streamlit component that allows you to copy text to clipboard",
+    description="A Streamlit copy-to-clipboard button component that respects the streamlit page styles.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/samsze0/streamlit-copy-to-clipboard",
@@ -30,5 +30,5 @@ setuptools.setup(
             "pytest-playwright-snapshot==1.0",
             "pytest-rerunfailures==12.0",
         ]
-    }
+    },
 )
